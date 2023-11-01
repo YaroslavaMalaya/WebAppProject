@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/style.css"/> 
+    <link rel="stylesheet" href="styles/constStyle.css"/> 
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="assets/pictures/logo1.png" alt="icon" id="icon" >
+            <span id="phtsrch">PHOTO SEARCH</span>
+        </div>
+        <div class="menu">
+            <button class="buttons" onclick="location.href='index.html'">Home</button>
+            <button class="buttons" onclick="location.href='profile.html'">Profile</button>
+            <button class="buttons">Log in</button>
+        </div>
+        <div class="menu-button">
+            <img src="assets/pictures/Menu.png" alt="menu" id="menu">
+            <ul class="menu-dropdown">
+                <li><button class="buttons" onclick="location.href='index.html'">Home</button></li>
+                <li><button class="buttons" onclick="location.href='profile.html'">Profile</button></li>
+                <li><button class="buttons" id="login-btn">Log in</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="maintxt">
+        <h1 id="text1">Find your <span id="blue-txt">perfect</span> photo!</h1><br><br>
+        <p>Type in a word related to your photo search and get amazing results.</p><br><br>
+        <div class="searchinput">
+            <img src="assets/pictures/L_Icon.png" alt="icon" id="licon">
+            <input type="text" id="input1" name="input1" value="" placeholder="Some txt">
+            <button class="bigbutton">Search</button>
+        </div>
+    </div><br><br>
+
+    <div class="examples">
+        <p id="ntexmpl">Here are examples of "nature" searches:</p><br><br>
+        <div class="background">
+            <div class="gallery">
+                <div class="card">
+                    <img src="assets/photos/first.jpg" alt="first photo">
+                </div>
+                <div class="card">
+                    <img src="assets/photos/second.jpg" alt="second photo">
+                </div>
+                <div class="card">
+                    <img src="assets/photos/third.jpg" alt="third photo">
+                </div>
+                <div class="card">
+                    <img src="assets/photos/fourth.jpg" alt="fourth photo">
+                </div>
+            </div>         
+        </div>   
+    </div>
+
+    <div class="container1"></div>
+
+    <div class="pagination">
+        <button class="arrow" id="prevArrow">← Previous</button>
+        <button class="arrow" id="nextArrow">Next →</button>
+    </div>
+    
+    <br><br><br><br>
+
+    <footer class="footer">
+        <div class="container8">
+            <div class="container9">
+                <div class="logo">
+                    <img src="assets/pictures/logo1.png" alt="icon" id="icon">
+                </div><br>
+                <p id="heypr">2023 SearchPhoto</p><br>
+                <p id="prpo">Privacy Policy</p>
+            </div>
+            <div class="container13"> 
+                <div class="container10">
+                    <p id="textbigger">Features</p><br>
+                    <p>Team & Single Training</p><br>
+                    <p>Expert Content</p><br>
+                </div>
+                <div class="container11">
+                    <p id="textbigger">Pages</p><br>
+                    <button class="fbtn" onclick="location.href='index.html'">Home</button><br>
+                    <button class="fbtn" onclick="location.href='profile.html'">Profile</button><br>
+                    <button class="fbtn">Log in</button><br>
+                </div>
+            </div>
+            <div class="container12">
+                <p id="textbigger">Keep up to date</p><br>
+                <div class="searchinput2">
+                    <input type="email" id="input2" name="input2" value="" placeholder="Enter your email">
+                    <button class="buttonf">Notify me</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </footer>
+    </div>
+
+    <script type="module" src="scripts/script.js"></script>
+</body>
+</html>
