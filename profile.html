@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Profile</title>
     <link rel="stylesheet" href="styles/style.css"/>
-    <link rel="stylesheet" href="styles/constStyle.css"/>
 </head>
 
 <body>
@@ -16,14 +15,14 @@
         <div class="menu">
             <button class="buttons" onclick="location.href='index.html'">Home</button>
             <button class="buttons" onclick="location.href='profile.html'">Profile</button>
-            <button class="buttons">Log in</button>
+            <button class="buttons" onclick="location.href='login.html'">Log in</button>
         </div>
         <div class="menu-button">
             <img src="assets/pictures/Menu.png" alt="menu" id="menu">
             <ul class="menu-dropdown">
                 <li><button class="buttons" onclick="location.href='index.html'">Home</button></li>
                 <li><button class="buttons" onclick="location.href='profile.html'">Profile</button></li>
-                <li><button class="buttons" id="login-btn">Log in</button></li>
+                <li><button class="buttons" id="login-btn" onclick="location.href='login.html'">Log in</button></li>
             </ul>
         </div>
     </header>
@@ -32,6 +31,8 @@
     <div class="containerfav">
         <h2 id="profiletxtx">Your favorites photos:</h2>
     </div><br>
+
+    <div class="nofav"></div>>
 
     <div class="container1"></div>
     <br><br><br><br>
@@ -55,7 +56,7 @@
                     <p id="textbigger">Pages</p><br>
                     <button class="fbtn" onclick="location.href='index.html'">Home</button><br>
                     <button class="fbtn" onclick="location.href='profile.html'">Profile</button><br>
-                    <button class="fbtn">Log in</button><br>
+                    <button class="fbtn" onclick="location.href='login.html'">Log in</button><br>
                 </div>
             </div>
             <div class="container12">

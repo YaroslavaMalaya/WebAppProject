@@ -1,0 +1,102 @@
+.formcontainer {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(39, 2, 173, 0.548); 
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.ga{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonGA{
+    display: flex;
+    align-items: center;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    background-color: #ebebff;
+    color: black;
+    height: 35px;
+}
+
+.buttonGA:active{
+    box-shadow: 0 10px 20px rgba(39, 2, 173, 0.548); 
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.or {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.buttonlog{
+    color: white; 
+    text-align: center;
+    width: 200px;
+    padding: 8px 0;
+    justify-content: center;
+    align-items: center;
+    background: #0400ff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.buttonlog:active{
+    background: white;
+    color: #0400ff; 
+}
+
+.input1{
+    border: none; 
+    padding: 8px;
+    font-size: 14px;
+    width: 300px;
+    outline: none;
+    width: 95%;
+    border: 1px solid #cecdfc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 20px;
+}
+
+#mustcont{
+    color: rgb(16, 0, 75);
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.requirementlist {
+    list-style-type: none;
+    padding: 0;
+}
+
+.requirementlist li {
+    color: rgba(16, 0, 73, 0.548);
+    display: flex;
+    padding-top: 8px;
+    align-items: center;
+    margin: 5px 0;
+}
+

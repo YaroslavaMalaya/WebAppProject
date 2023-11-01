@@ -359,10 +359,10 @@ header {
 .buttonf{
     color: white; 
     text-align: center;
-    padding: 8px 10px;
+    padding: 12px 14px;
     justify-content: center;
     align-items: center;
-    font-size: 18px; 
+    font-size: 11px; 
     background: #0400ff;
     border: none;
     border-radius: 30px;

@@ -2,22 +2,25 @@ import { saveFavorites, loadFavorites } from './favorite.js';
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const favoritesGallery = document.querySelector('.container1');
+    const fav = document.querySelector(".containerfav");
+    const nofav = document.querySelector(".nofav");
+
 
     function displayFavorites() {
         const favorites = loadFavorites();
 
 
         if (favorites.length === 0) {
+            fav.style.display = "none";
             const noFavoritesMessage = document.createElement('div');
             noFavoritesMessage.className = "containerfav";
             noFavoritesMessage.innerText = 'YOU DO NOT HAVE ANY FAVORITE PHOTOS';
             noFavoritesMessage.style.fontSize = '2em'; 
             noFavoritesMessage.style.textAlign = 'center';
             noFavoritesMessage.style.marginTop = '100px';
-            noFavoritesMessage.style.marginBottom = '500px';
-            noFavoritesMessage.style.marginLeft = '70%';
+            noFavoritesMessage.style.marginBottom = '500px';            
             noFavoritesMessage.style.animation = 'pulse 1s infinite';
-            favoritesGallery.appendChild(noFavoritesMessage);
+            nofav.appendChild(noFavoritesMessage);
         } else {
             favorites.forEach(src => {
                 const block = document.createElement('div');
