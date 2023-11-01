@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const examplesElement = document.querySelector('.examples');
     const prevArrow = document.querySelector('#prevArrow');
     const nextArrow = document.querySelector('#nextArrow');
+    const buttons = document.querySelectorAll('.helpinput .buttonhelp');
 
     let currentPage = 1;
 
@@ -24,12 +25,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     searchButton.addEventListener('click', () => {
         currentPage = 1;
+        buttons.forEach(btn => {
+            btn.classList.remove('active-button');
+        });
         fetchData();
     });
 
     input.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
             currentPage = 1;
+            buttons.forEach(btn => {
+                btn.classList.remove('active-button');
+            });
             fetchData();
             event.preventDefault(); 
         }
@@ -61,6 +68,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
             console.error('Error fetching data from Pexels API:', error);
         }
     }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            input.value = button.textContent;
+            currentPage = 1;
+            buttons.forEach(btn => {
+                btn.classList.remove('active-button');
+            });
+            button.classList.add('active-button');
+            fetchData();
+        });
+    });
 
     function displayResults(photos) {
         let favorites = loadFavorites();
