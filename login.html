@@ -47,8 +47,9 @@
         
         <div class="or"> Or</div>
         
-        <input class="input1" type="email" placeholder="Enter the email" value="" required><br>
-        <input class="input1" id="pasinput" type="password" placeholder="Enter the password" value="" required><br>
+        <input class="input1" type="email" placeholder="Enter the email" value="" required required title="Please enter a valid email address."><br>
+        <input class="input1" id="pasinput" type="password" placeholder="Enter the password" value="" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}"
+        title="Password must contain at least: 8 characters, 1 number, 1 lowercase letter, 1 special symbol (!@#$%^&*), and 1 uppercase letter."><br>
 
         <div class="content">
             <p id="mustcont">Password must contain:</p>

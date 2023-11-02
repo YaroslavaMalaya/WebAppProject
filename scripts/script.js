@@ -98,6 +98,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
             favoriteBtn.className = 'favorite';
             favoriteBtn.innerText = '❤︎';
             favoriteBtn.addEventListener('click', () => {
+
+                const currentUser = localStorage.getItem('currentUser');
+                if (!currentUser) {
+                    alert('Please log in to save favorites.');
+                    return;
+                }
+
                 if (!favorites.includes(photo.src.medium)) {
                     favorites.push(photo.src.medium);
                     console.log('Added to favorites:', photo.src.medium);
@@ -121,3 +128,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if our session key exists
+    if (!sessionStorage.getItem('sessionStarted')) {
+        // If not, it's a new session, so clear local storage
+        localStorage.clear();
+
+        // Now mark this session as started
+        sessionStorage.setItem('sessionStarted', 'true');
+    }
+});
+

@@ -32,3 +32,25 @@ document.getElementById('googleLoginButton').addEventListener('click', function(
     const googleAuthURL = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientID}&redirect_uri=${redirectURI}&scope=${scope}&response_type=${responseType}`;
     window.location.href = googleAuthURL;
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.buttonlog').addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const emailElement = document.querySelector('.input1[type="email"]');
+        const passwordElement = document.querySelector('.input1[type="password"]');
+    
+        if (emailElement.checkValidity() && passwordElement.checkValidity()) {
+            localStorage.setItem('currentUser', emailElement.value);
+    
+            alert('User added successfully!');
+            emailElement.value = "";
+            passwordElement.value = "";
+        } else {
+            alert('Please check the input values.');
+        }
+    
+    });
+});
+
