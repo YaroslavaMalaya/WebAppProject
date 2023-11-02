@@ -1,4 +1,4 @@
-import { saveFavorites, loadFavorites } from './favorite.js';
+const { saveFavorites, loadFavorites } = require('./favorite.js');
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const searchButton = document.querySelector('.bigbutton');
