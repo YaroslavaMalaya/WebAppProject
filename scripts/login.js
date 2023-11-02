@@ -22,3 +22,13 @@ passwordInput.addEventListener("input", (e) => {
         }
     });
 });
+
+document.getElementById('googleLoginButton').addEventListener('click', function() {
+    const clientID = '734678762544-l8v10tmg9bouf8sn1052j0jv3movk7q0.apps.googleusercontent.com';
+    const redirectURI = 'http://localhost:3000/auth/google/callback';
+    const scope = 'profile email';
+    const responseType = 'code';
+
+    const googleAuthURL = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientID}&redirect_uri=${redirectURI}&scope=${scope}&response_type=${responseType}`;
+    window.location.href = googleAuthURL;
+});
